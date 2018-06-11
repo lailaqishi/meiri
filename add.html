@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/public/static/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+
+		<ul>
+		{volist name="as" id="va"}
+
+			<li>{$va.cateaname}
+				<ul>
+					 {volist name="bs" id="vo"}
+					{eq name="vo.cateaid" value="$va.id"}<li>{$vo.catebname}</li>{/eq}
+					{/volist} 
+				</ul>
+
+
+			</li>
+
+		{/volist}
+		</ul>
+		<script type="text/javascript">
+
+
+		</script>
+
+</body>
+</html>
